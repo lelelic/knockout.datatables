@@ -89,6 +89,10 @@ ko.bindingHandlers.dataTable = {
             });
         }
 
+        if (binding.retrieve) {
+            options.bRetrieve = binding.retrieve;
+        }
+
         if (binding.initialSortColumn) {
             options.aaSortingFixed = [[binding.initialSortColumn, 'asc']];
         }
