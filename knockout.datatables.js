@@ -92,7 +92,6 @@ ko.bindingHandlers.dataTable = {
         if (binding.retrieve) {
             options.bRetrieve = binding.retrieve;
         }
-
         if (binding.initialSortColumn) {
             options.aaSortingFixed = [[binding.initialSortColumn, 'asc']];
         }
@@ -122,6 +121,8 @@ ko.bindingHandlers.dataTable = {
         if (binding.oLanguage) {
             options.oLanguage = binding.oLanguage;
         }
+		
+		
 
         // Register the row template to be used with the DataTable.
         if (binding.rowTemplate && binding.rowTemplate !== '') {
