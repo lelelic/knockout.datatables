@@ -92,6 +92,7 @@ ko.bindingHandlers.dataTable = {
         if (binding.retrieve) {
             options.bRetrieve = binding.retrieve;
         }
+		
         if (binding.initialSortColumn) {
             options.aaSortingFixed = [[binding.initialSortColumn, 'asc']];
         }
@@ -114,7 +115,9 @@ ko.bindingHandlers.dataTable = {
             options.sPaginationType = binding.sPaginationType;
         }
 
-        if (binding.bPaginate) {
+		//true / false managing
+		//default is true for datatable plugin
+        if (binding.hasOwnProperty("bPaginate")) {
             options.bPaginate = binding.bPaginate;
         }
 
