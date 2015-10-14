@@ -1,0 +1,31 @@
+<div class="table-responsive">
+	<table class="table table-bordered table-condensed table-striped table-hover" id="compatibleItemGrid"
+		   data-bind="dataTable: { dataSource: myObservableArray,
+		   rowTemplate: 'compatibleItemGridTemplate'
+	columns: [{'name' : 'Col1'},
+				{'name' : 'Col2'},
+				{'name': 'Col3',  sortable: false},
+				{'name': 'Col4', visible: false}],
+	bPaginate: true,
+	retrieve:true,
+	iDisplayLength: 10
+}
+">
+		<thead>
+			<tr>
+				<th class="text-center">Col1</th>
+				<th class="text-center">Col2</th>
+				<th class="text-center">Col3</th>
+				<th class="text-center">Col4</th>
+			</tr>
+		</thead>
+		<tbody></tbody>
+	</table>
+
+	  <script id="compatibleItemGridTemplate" type="text/html">
+		<td class="text-left" data-bind="text: field1"></td>
+		<td class="text-left" data-bind="text: object.field2"></td>
+		<td class="text-left" data-bind="text: object.field3"></td>
+		<td class="text-left" data-bind="text: field4"></td>
+	</script>
+</div>
